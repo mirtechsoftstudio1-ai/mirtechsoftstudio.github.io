@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MirTechsoft Studio creates thoughtful, useful and simple digital experiences. Discover TimeNest.">
+  <meta name="theme-color" content="#0C2D37">
+  <title>MirTechsoft Studio | Building Meaningful Digital Experiences</title>
+
+  <style>
+    :root {
+      --deep: #0C2D37;
+      --teal: #3F776B;
+      --orange: #EF9545;
+      --olive: #CCD386;
+      --cream: #F3F1E5;
+      --white: #FFFFFF;
+      --muted: #64766F;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--deep);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--deep);
+      color: white;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .brand span { color: var(--orange); }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover { color: var(--olive); }
+
+    .hero {
+      background: var(--deep);
+      color: white;
+      padding: 105px 0 115px;
+    }
+
+    .eyebrow {
+      color: var(--olive);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 65px);
+      line-height: 1.12;
+      max-width: 800px;
+      margin: 22px 0;
+    }
+
+    h1 span { color: var(--orange); }
+
+    .hero p {
+      max-width: 620px;
+      color: #D6E2DE;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--deep);
+      padding: 13px 25px;
+      border-radius: 7px;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+
+    .button:hover { background: var(--olive); }
+
+    section { padding: 80px 0; }
+
+    .section-label {
+      color: var(--teal);
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: clamp(29px, 4vw, 40px);
+      line-height: 1.2;
+      margin: 12px 0 18px;
+    }
+
+    .intro {
+      max-width: 680px;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about-panel {
+      background: #E8EBCF;
+      border-radius: 16px;
+      padding: 35px;
+    }
+
+    .about-panel h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .apps { background: #FAF6E9; }
+
+    .app-card {
+      margin-top: 35px;
+      background: white;
+      border: 1px solid #D1D3B6;
+      border-radius: 18px;
+      padding: 32px;
+      max-width: 720px;
+    }
+
+    .app-icon {
+      width: 65px;
+      height: 65px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--deep);
+      color: var(--olive);
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+
+    .app-card h3 { font-size: 27px; }
+
+    .app-card p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 20px;
+      background: #E8EBCF;
+      color: var(--deep);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .contact {
+      background: var(--deep);
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #D6E2DE;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact a.email {
+      display: inline-block;
+      color: var(--olive);
+      margin-top: 20px;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #071F27;
+      color: #C7D5D0;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: 14px; }
+      .hero { padding: 75px 0; }
+      section { padding: 60px 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#">MirTechsoft <span>Studio</span></a>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#apps">Our Apps</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Welcome to MirTechsoft Studio</div>
+
+        <h1>
+          Building meaningful
+          <span>digital experiences.</span>
+        </h1>
+
+        <p>
+          We focus on creating thoughtful, useful and simple digital
+          products designed to make everyday experiences better.
+        </p>
+
+        <a class="button" href="#apps">Explore Our Apps</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <div class="section-label">Who We Are</div>
+          <h2>Technology with a purpose.</h2>
+
+          <p class="intro">
+            MirTechsoft Studio is a digital product and software
+            development brand focused on practical ideas, thoughtful
+            design and user-friendly experiences.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <h3>Our Approach</h3>
+          <p>
+            We believe useful technology should be simple to understand,
+            comfortable to use and designed around real-world needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="apps" id="apps">
+      <div class="container">
+        <div class="section-label">Our Products</div>
+        <h2>Apps by MirTechsoft Studio</h2>
+
+        <p class="intro">
+          Explore our digital products and the ideas behind them.
+        </p>
+
+        <article class="app-card">
+          <div class="app-icon">T</div>
+
+          <h3>TimeNest</h3>
+
+          <p>
+            A space for your future self. Save letters, goals and
+            memories today, then revisit them when the right time comes.
+          </p>
+
+          <span class="status">Mobile App</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-label">Get in Touch</div>
+        <h2>Let's Connect.</h2>
+
+        <p>
+          For general inquiries and information about MirTechsoft Studio,
+          you can contact us through email.
+        </p>
+
+        <a class="email"
+           href="mailto:mirtechsoftstudio1@gmail.com">
+          mirtechsoftstudio1@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 MirTechsoft Studio. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
